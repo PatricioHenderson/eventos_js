@@ -15,20 +15,34 @@ Verifique que en la consola sigan apereciendo los mensajes de log
 
 const boton = document.querySelector("button");
 
-boton.addEventListener("click", () => {
-    console.log("Respuesta evento click");
-    boton.className = "btnClick";
-})
+boton.onclick = () =>{
+    console.log("respuesta a click");
+    boton.className = "btnClick";}
 
-boton.addEventListener("mouseover", () => {
-    console.log("Respuesta evento mouseover");
+boton.onmouseover = () => {
+    console.log("Respuesta a mouseover");
     boton.className = "btnOver";
-})
+}
 
-boton.addEventListener("mouseout", () => {
-    console.log("Respuesta evento mouseout");
+boton.onmouseout = () =>{
+    console.log("Respuesta a mouseout");
     boton.className = "btnOut";
-})
+}
+
+// boton.addEventListener("click", () => {
+//     console.log("Respuesta evento click");
+//     boton.className = "btnClick";
+// })
+
+// boton.addEventListener("mouseover", () => {
+//     console.log("Respuesta evento mouseover");
+//     boton.className = "btnOver";
+// })
+
+// boton.addEventListener("mouseout", () => {
+//     console.log("Respuesta evento mouseout");
+//     boton.className = "btnOut";
+// })
 
 
 /* 2 - Enunciado
@@ -39,6 +53,11 @@ en como capturar este evento y además como capturar el valor
 actual seleccionado en la caja de seleccion.
 
 */
+const selector = document.querySelector("select")
+selector.onchange = () => {
+    console.log(selector.value);
+}
+
 
 /* 3 - Enunciado
 
@@ -49,3 +68,8 @@ PISTA: Debe utilizar el mismo tipo de evento que en el ejercicio
 anterior.
 
 */
+const inputName = document.querySelector("input")
+console.log(inputName)
+inputName.onchange = () => {
+    alert(inputName.value)
+}
